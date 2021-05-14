@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TEST</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+        /* Color */
+        --color-primary-light: #e028db;
+        --color-primary-dark: #a809a4;
+        --color-secondary: #4b51d2;
+        --color-bar-progressive: #12da3f;
+        --color-arrow-up: #12da3f;
+        --color-arrow-down: #ff2467;
+        --color-font: #fafafa;
+        --color-font-light: #a3a4a7;
+        --color-chart-background: #4d5055;
+        --color-chart-complementary-one: #ffff5d;
+        --color-chart-complementary-two: #00ffe5;
+        --color-chart-complementary-three: ;
+        --color-background-soft: #3a3f45;
+        --color-background-dark: #22252c;
+        }
+        html {
+            font-size: 62.5%;
+            font-family: "Saira", sans-serif;
+        }
+
+        body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--color-background-soft) ;
+        margin: 0;
+        height: 100vh;
+        }
+
+        .container {
+           display: grid;
+           grid-template-columns: 4% 37% 37% 17%;
+           grid-template-rows: 8% 32% 51%;
+           column-gap: 2.4rem;
+           row-gap: 2.4rem;
+           grid-template-areas:
+           "nav title title title" 
+           "nav card1 card2 card5large"
+           "nav card3 card4 card5large";
+           height: 100vh;
+        }
+        .nav{
+            background-color: #12da3f;
+            grid-area: nav;
+            grid-row: 1 / 5;
+        }
+
+        .title{
+            background-color:#e028db;
+            grid-area: title;
+        }
+        .card1{
+            background-color:#00ffe5;
+            grid-area: card1;
+        }
+        .card2{
+            background-color:#ffff5d;
+            grid-area: card2;
+        }
+        .card3{
+            background-color:deeppink;
+            grid-area: card3;
+        }
+        .card4{
+            background-color:coral;
+            grid-area: card4;
+        }
+        .card5large{
+            background-color:deepskyblue;
+            grid-area: card5large;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="nav"></div>
+        <div class="title"></div>
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
+        <div class="card5large"></div>
+    </main>
+</body>
+</html>

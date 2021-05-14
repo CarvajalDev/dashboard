@@ -56,7 +56,7 @@ html {
   width: 24px;
   height: 24px;
   color: var(--color-font);
-  background-image: url("./assets/icons/hamburger-menu.svg");
+  background-image: url("../assets/icons/hamburger-menu.svg");
   background-repeat: no-repeat;
 }
 
@@ -66,6 +66,7 @@ html {
 
 /* Contenedor Principal */
 .container {
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   margin-left: 16px;
@@ -140,7 +141,7 @@ html {
   height: 6.78px;
   padding-top: 17px;
   padding-right: 24px;
-  background-image: url("./assets/icons/arrow-up.svg");
+  background-image: url("../assets/icons/arrow-up.svg");
   background-repeat: no-repeat;
 }
 
@@ -151,7 +152,7 @@ html {
   margin-right: 12px;
   width: 24px;
   height: 24px;
-  background-image: url("./assets/icons/info-icon.svg");
+  background-image: url("../assets/icons/info-icon.svg");
   color: var(--color-primary-light);
   background-repeat: no-repeat;
 }
@@ -179,7 +180,7 @@ html {
   height: 6.78px;
   padding-bottom: 9px;
   padding-right: 24px;
-  background-image: url("./assets/icons/arrow-down.svg");
+  background-image: url("../assets/icons/arrow-down.svg");
   background-repeat: no-repeat;
 }
 
@@ -190,7 +191,7 @@ html {
   margin-right: 12px;
   width: 24px;
   height: 24px;
-  background-image: url("./assets/icons/three-dots.svg");
+  background-image: url("../assets/icons/three-dots.svg");
   color: var(--color-primary-light);
   background-repeat: no-repeat;
 }
@@ -299,6 +300,7 @@ li::before {
     margin: 0;
     margin-right: 2.4rem;
     margin-bottom: 48px;
+    min-height: 100vh;
   }
 
   .main-general--title {
@@ -333,7 +335,7 @@ li::before {
     margin: 0 auto;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/home-icon.svg");
+    background-image: url("../assets/icons/home-icon.svg");
     background-repeat: no-repeat;
   }
 
@@ -347,7 +349,7 @@ li::before {
     padding-top: 28px;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/book-icon.svg");
+    background-image: url("../assets/icons/book-icon.svg");
     background-repeat: no-repeat;
   }
 
@@ -422,6 +424,9 @@ li::before {
   }
 
   .container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
     height: 100vh;
     margin: 0;
     margin-right: 2.4rem;
@@ -459,7 +464,7 @@ li::before {
     margin: 0 auto;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/home-icon.svg");
+    background-image: url("../assets/icons/home-icon.svg");
     background-repeat: no-repeat;
   }
 
@@ -473,7 +478,7 @@ li::before {
     padding-top: 28px;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/book-icon.svg");
+    background-image: url("../assets/icons/book-icon.svg");
     background-repeat: no-repeat;
   }
   /*
@@ -491,27 +496,41 @@ li::before {
   }*/
 
   .c1 {
+    position: relative;
     width: 68.7%;
+    min-height: 250px;
+    max-height: 100vh;
+    height: 100vh;
+    padding-bottom: 40px;
     order: 1;
     margin-right: 2.4rem;
+    margin-bottom: 2.4rem;
+    background-color: #12da3f;
   }
   .c2 {
     width: 48%;
+    height: auto;
+    min-height: 256px;
     display: inline-block;
     margin-right: 24px;
   }
   .c3 {
     width: 48%;
+    height: auto;
+    min-height: 256px;
     display: inline-block;
   }
   .c4 {
     width: 48%;
+    height: 38.5rem;
     display: inline-block;
     margin-right: 24px;
   }
   .c5 {
     width: 48%;
+    height: auto;
     display: inline-block;
+    height: calc(100% - 100px);
   }
   .c6 {
     margin-top: 5.8rem;
@@ -526,7 +545,6 @@ li::before {
   }
   /* Charts Breakpoints */
   #chart1 {
-    height: 300px;
     width: 300px;
     min-height: 180px;
     max-width: 400px;
@@ -534,7 +552,6 @@ li::before {
     margin: 0 auto;
   }
   #chart2 {
-    height: 300px;
     width: 300px;
     min-height: 180px;
     max-width: 3000px;
@@ -542,35 +559,29 @@ li::before {
     margin: 0 auto;
   }
   #chart3 {
-    height: 350px;
-    width: 320px;
+    width: 70%;
     min-height: 230px;
-    max-width: 4000px;
-    max-height: 4000px;
     margin: 0 auto;
   }
   #chart4 {
-    height: 350px;
-    width: 320px;
+    width: 70%;
     min-height: 230px;
-    max-width: 4000px;
-    max-height: 4000px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1800px) {
   #chart1 {
-    height: 300px;
-    width: 450px;
+    height: 290px;
+    width: 400px;
     min-height: 180px;
     max-width: 3000px;
     max-height: 400px;
     margin: 0 auto;
   }
   #chart2 {
-    height: 300px;
-    width: 450px;
+    height: 290px;
+    width: 400px;
     min-height: 180px;
     max-width: 3000px;
     max-height: 400px;
@@ -634,7 +645,7 @@ li::before {
     margin: 0 auto;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/home-icon.svg");
+    background-image: url("../assets/icons/home-icon.svg");
     background-repeat: no-repeat;
   }
 
@@ -648,7 +659,7 @@ li::before {
     padding-top: 28px;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/book-icon.svg");
+    background-image: url("../assets/icons/book-icon.svg");
     background-repeat: no-repeat;
   }
   /*
@@ -667,30 +678,30 @@ li::before {
 
   .c1 {
     width: 78%;
-    height: 84vh;
+    height: 100vh;
     order: 1;
     margin-right: 2.4rem;
   }
   .c2 {
     width: 49%;
-    height: 46%;
+    height: 40%;
     display: inline-block;
     margin-right: 24px;
   }
   .c3 {
     width: 49%;
-    height: 46%;
+    height: 40%;
     display: inline-block;
   }
   .c4 {
     width: 49%;
-    height: 60%;
+    height: 48%;
     display: inline-block;
     margin-right: 24px;
   }
   .c5 {
     width: 49%;
-    height: 60%;
+    height: 48%;
     display: inline-block;
   }
   .c6 {
@@ -783,7 +794,7 @@ li::before {
     margin: 0 auto;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/home-icon.svg");
+    background-image: url("../assets/icons/home-icon.svg");
     background-repeat: no-repeat;
   }
 
@@ -797,7 +808,7 @@ li::before {
     padding-top: 28px;
     width: 24px;
     height: 24px;
-    background-image: url("./assets/icons/book-icon.svg");
+    background-image: url("../assets/icons/book-icon.svg");
     background-repeat: no-repeat;
   }
   /*
@@ -851,9 +862,27 @@ li::before {
 }
 
 @media (min-width: 3000px) {
+  #chart1 {
+    padding-top: 6%;
+    height: 400px;
+    width: 600px;
+    min-height: 230px;
+    max-width: 4000px;
+    max-height: 4000px;
+    margin: 0 auto;
+  }
+  #chart2 {
+    padding-top: 6%;
+    height: 400px;
+    width: 600px;
+    min-height: 230px;
+    max-width: 4000px;
+    max-height: 4000px;
+    margin: 0 auto;
+  }
   #chart3 {
-    padding-top: 20%;
-    height: 863px;
+    padding-top: 10%;
+    height: 400px;
     width: 500px;
     min-height: 230px;
     max-width: 4000px;
@@ -861,13 +890,28 @@ li::before {
     margin: 0 auto;
   }
   #chart4 {
-    padding-top: 20%;
-    height: 863px;
+    padding-top: 10%;
+    height: 400px;
     width: 500px;
     min-height: 230px;
     max-width: 4000px;
     max-height: 4000px;
     margin: 0 auto;
+  }
+  .c1 {
+    min-height: 100vh;
+  }
+  .c2 {
+    height: 38%;
+  }
+  .c3 {
+    height: 38%;
+  }
+  .c4 {
+    height: 54%;
+  }
+  .c5 {
+    height: 54%;
   }
 }
 
@@ -889,23 +933,22 @@ li::before {
     margin: 0 auto;
   }
   #chart3 {
-    padding-top: 20%;
-    height: 1300px;
-    width: 900px;
+    height: 300px;
+    width: 600px;
     min-height: 230px;
     max-width: 4000px;
     max-height: 4000px;
     margin: 0 auto;
   }
   #chart4 {
-    padding-top: 20%;
-    height: 1300px;
-    width: 900px;
+    height: 300px;
+    width: 600px;
     min-height: 230px;
     max-width: 4000px;
     max-height: 4000px;
     margin: 0 auto;
   }
+
   .nav-mobile {
     display: none;
   }
@@ -981,27 +1024,30 @@ li::before {
 
   .c1 {
     width: 80%;
+    min-height: 100vh;
     order: 1;
     margin-right: 2.4rem;
   }
   .c2 {
     width: 49%;
+    height: 40%;
     display: inline-block;
     margin-right: 24px;
   }
   .c3 {
     width: 49%;
+    height: 40%;
     display: inline-block;
   }
   .c4 {
-    height: auto;
     width: 49%;
+    height: 54%;
     display: inline-block;
     margin-right: 24px;
   }
   .c5 {
-    height: auto;
     width: 49%;
+    height: 54%;
     display: inline-block;
   }
   .c6 {
