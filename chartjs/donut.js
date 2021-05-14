@@ -26,5 +26,11 @@ var myChart = new Chart(ctx, {
     options: {
         //responsive: true,
         //maintanAspectRatio:false,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Weekly',
+            }
+        }
     }
 });
