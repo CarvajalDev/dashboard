@@ -287,6 +287,27 @@
             font-size: 1.4rem;
         }
 
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            height: 20vh;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+
+        .donut-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            height: 50vh;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+
         @media (min-width: 3840px)  { 
             .container {
                 display: grid;
@@ -430,6 +451,7 @@
                 width: 200px;
                 height: 200px;
             }
+            
 
         }
 
@@ -482,10 +504,10 @@
                 display: inline-block;
                 font-size: 1.4rem;
                 font-weight: 700;
-                margin: 1.8rem 2.5rem 2.4rem 2.0rem;
+                margin: 1.8rem 2.5rem 0.8rem 2.0rem;
             }
             .indicador-arriba{
-            margin: 1.8rem 2.4rem 2.4rem 0rem;
+            margin: 1.8rem 2.4rem 0.8rem 0rem;
             }
             .thisw{
                 text-indent:-666em;
@@ -505,6 +527,13 @@
                 background-image: url("./assets/icons/info-icon.svg");
                 color: var(--color-primary-light);
                 background-repeat: no-repeat;
+            }
+            .chart-container {
+                box-sizing: border-box;
+                width: 90%;
+                height: 60%;
+                margin: 0 auto;
+                overflow: scroll;
             }
         }
 
@@ -563,7 +592,10 @@
                 display: inline-block;
                 font-size: 1.4rem;
                 font-weight: 700;
-                margin: 1.8rem 2.5rem 2.4rem 2.0rem;
+                margin: 1.8rem 2.5rem 0.8rem 2.0rem;
+            }
+            .indicador-arriba{
+                margin-bottom: 0rem;
             }
             .thisw{
                 text-indent:-666em;
@@ -613,6 +645,18 @@
             .power-icon{
                 display: none;
             }
+            .chart-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 80%;
+                height: auto;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                margin-top: 0;
+                overflow: scroll;
+            }
         }
 
     </style>
@@ -639,15 +683,26 @@
             <span class="i-icon"></span>
             <p class="thisw"><span class="point-pink"></span>This week</p>
             <p class="lastw"><span class="point-purple"></span>Last week</p>
+
+            <div class="chart-container">
+                <canvas id="linealChart"></canvas>
+            </div>
+
         </div>
         <div class="card2">
             <p class="titular">Visitors</p>
             <p class="indicador-abajo"><span class="icon-down"></span>-0.3%</p>
             <span class="three-dots"></span>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
         </div>
         <div class="card3">
             <p class="titular">Earnings</p>
             <span class="three-dots"></span>
+            <div class="donut-container">
+                <canvas id="donutChart"></canvas>
+            </div>
         </div>
         <div class="card4">
                 <p class="titular">Team</p>
@@ -723,5 +778,11 @@
             </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+    <script src="./chartjs/lineal.js"></script>
+    <script src="./chartjs/bar.js"></script>
+    <script src="./chartjs/donut.js"></script>
+
 </body>
 </html>
