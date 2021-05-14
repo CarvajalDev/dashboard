@@ -254,7 +254,7 @@
             padding-right: 8px;
             color: var(--color-primary-dark);
             line-height: 24px;
-            font-size: 16px;
+            font-size: 1.6rem;
         }
         .card5large p {
             font-size: 1.4rem;
@@ -282,6 +282,81 @@
         .labelRegular {
             margin-bottom: 2.2rem;
             font-size: 1.4rem;
+        }
+
+        @media (min-width: 3840px)  { 
+            .container {
+                display: grid;
+                column-gap: 4.4rem;
+                row-gap: 4.4rem;
+            }
+            .title{
+            grid-area: title;
+            color: var(--color-font);
+            font-size: 0.8vw;
+            font-weight: 700;
+            padding-top: 1.3rem;
+            }
+            .titular {
+                display: inline-block;
+                font-size: 0.6vw;
+                font-weight: 700;
+                margin: 1.8rem 6.0rem 2.4rem 2.0rem;
+            }
+            .indicador-arriba{
+                color: var(--color-arrow-up);
+                font-size: 0.6vw;
+                font-weight: 700;
+                margin: 1.8rem 6.0rem 2.4rem 0rem;
+            }
+            .thisw{
+                font-size: 0.4vw;
+                margin-right: 2.4rem;
+            }
+            .lastw{
+                font-size: 0.4vw;
+                margin-right: 3.3rem;
+            }
+            .card5large p {
+                font-size: 0.6vw;
+            }
+            .card3 p {
+             font-size: 0.6vw;
+            }
+            .card4 p {
+             font-size: 0.6vw;
+            }
+            table {
+                border-collapse: collapse;
+                width: 90%;
+                margin-left: 3.4rem;
+                margin-right: 5.5rem;
+                font-size: 0.6vw;
+            }
+            .card5large ul {
+            font-size: 0.6vw;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 3.2rem;
+
+            }
+            li::before {
+                content: "\2022";
+                padding-right: 8px;
+                color: var(--color-primary-dark);
+                line-height: 24px;
+                font-size: 0.6vw;
+            }
+            .card5large p {
+                font-size: 0.6vw;
+            }
+            .indicador-abajo{
+                color: var(--color-arrow-down);
+                font-size: 0.6vw;
+                font-weight: 700;
+                margin: 1.8rem 2.4rem 2.4rem 0;
+             }
+
         }
 
         @media (min-width: 2000px)  { 
