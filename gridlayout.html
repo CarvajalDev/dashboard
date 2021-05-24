@@ -37,25 +37,26 @@
         font-family: "Saira", sans-serif;
         background-color: var(--color-background-soft) ;
         margin: 0;
-        height: 100vh;
         }
+        
 
         .container {
             display: grid;
             grid-template-columns: 4% 36% 36% 17%;
-            grid-template-rows: 5% 32% 53%;
+            grid-template-rows:  5% 32% 53%;
             column-gap: 2.4rem;
             row-gap: 2.4rem;
             grid-template-areas:
             "nav title title title" 
             "nav card1 card2 card5large"
             "nav card3 card4 card5large";
-            height: 100vh;
+            min-height: 100vh;
         }
         .nav{
             background-color: var(--color-background-dark);
             grid-area: nav;
             grid-row: 1 / 5;
+   
         }
         .logo-icon{
             display: block;
@@ -91,7 +92,7 @@
             margin-bottom: 2.8rem;
             bottom:0;
             width: 2.4rem;
-            height: 2.4rem;
+            min-height: 2.4rem;
             background-image: url("assets/icons/power-icon.svg");
             background-repeat: no-repeat;
         }
@@ -291,7 +292,7 @@
             display: flex;
             flex-wrap: wrap;
             width: 60%;
-            height: 20vh;
+            min-height: 20vh;
             text-align: center;
             justify-content: center;
             align-items: center;
@@ -311,8 +312,15 @@
         @media (min-width: 3840px)  { 
             .container {
                 display: grid;
-                column-gap: 4.4rem;
-                row-gap: 4.4rem;
+                grid-template-columns: 4% 36% 36% 17%;
+                grid-template-rows: 5% 32% 53%;
+                column-gap: 6.4rem !important;
+                row-gap: 6.4rem !important;
+                grid-template-areas:
+                "nav title title title" 
+                "nav card1 card2 card5large"
+                "nav card3 card4 card5large";
+                height: 100vh;
             }
             .logo-icon{
                 margin-top: 1vw;
@@ -451,18 +459,152 @@
                 width: 200px;
                 height: 200px;
             }
-            
-
         }
 
-        @media (min-width: 2000px)  { 
+        @media (min-width: 2000px) and (max-width:3839)  { 
             .container {
                 grid-template-columns: 4% 37% 37% 17%;
-                grid-template-rows: 5% 32% 55%;
+                grid-template-rows: 4% 32% 55%;
+                column-gap: 3.4rem;
+                row-gap: 3.4rem;
+            }
+            .logo-icon{
+                margin-top: 1vw;
+                padding-bottom: 70px;
+                padding-right: 39px;
+                background-image: url("./assets/icons/2k-logo.svg");
+             }
+             .home-icon{
+                margin-top: 2vw;
+                padding-bottom: 70px;
+                padding-right: 43px;
+                background-image: url("assets/icons/2k-home.svg")
+            }
+            .book-icon{
+                margin-top: 1vw;
+                padding-bottom: 70px;
+                padding-right: 39px;
+                background-image: url("assets/icons/2k-book.svg");
+            }
+            .power-icon{
+                margin-bottom: 1.2vw;
+                padding-bottom: 70px;
+                padding-right: 38px;
+                background-image: url("assets/icons/2k-power.svg");
+            }
+            .three-dots {
+                background-image: url("./assets/icons/2k-three-points.svg");
+                display: inline-block;
+                float: right;
+                margin-top: 17px;
+                margin-right: 0px;
+                width: 68px;
+                height: 68px;
+                color: var(--color-primary-light);
+                background-repeat: no-repeat;
+            }
+            .point-pink{
+                width: 29px;
+                height: 29px;
+                background-image: url("./assets/icons/2k-pink-dot.svg");
+                margin-right: 1.4rem;
+            }
+            .point-purple{
+                width: 29px;
+                height: 29px;
+                background-image: url("./assets/icons/2k-purple-dot.svg");
+                margin-right: 1.4rem;
+            }
+            .title{
+            font-size: 0.8vw;
+            font-weight: 700;
+            padding-top: 1vw;
+            }
+            .titular {
+                font-size: 0.8vw;
+                font-weight: 700;
+                margin: 1.8rem 6.0rem 2.4rem 2.0rem;
+            }
+            .indicador-arriba{
+                font-size: 0.8vw;
+                font-weight: 700;
+                margin: 1.8rem 6.0rem 2.4rem 1vw;
+            }
+            .thisw{
+                margin-left: 10vw;
+                font-size: 0.6vw;
+                margin-right: 2.4rem;
+            }
+            .lastw{
+                margin-left: 1vw;
+                font-size: 0.6vw;
+                margin-right: 3.3rem;
+            }
+            .indicador-abajo{
+                font-size: 0.8vw;
+                font-weight: 700;
+                margin: 1.8rem 2.4rem 2.4rem 3.2rem;
+            }
+            .card3 p {
+                font-size: 0.8vw;
+            }
+            .card4 p {
+                font-size: 0.8vw;
+            }
+            table {
+                border-collapse: collapse;
+                width: 90%;
+                margin-top: 4.0rem;
+                margin-left: 3.4rem;
+                margin-right: 5.5rem;
+                font-size: 0.8vw;
+            }
+            .card5large p {
+                font-size: 0.8vw;
+            }
+            .card5large ul {
+                font-size: 0.8vw;
+                list-style: none;
+                padding: 0;
+                margin-bottom: 3.2rem;
+            }
+            li::before {
+                content: "\2022";
+                padding-right: 8px;
+                color: var(--color-primary-dark);
+                line-height: 24px;
+                font-size: 0.8vw;
+            }
+            .card5large p {
+                font-size: 0.8vw;
+            }
+            .photo{
+                margin-left: 2.6vw;
+                text-align: center;
+                margin-top: 2.2vw;
             }
         }
 
-        @media (min-width: 1025px) and (max-width: 1328px) {
+        @media (min-width: 1920px) {
+            .container{
+                column-gap: 3.4rem;
+                row-gap: 3.4rem;
+            }
+        }
+
+        @media (min-width: 1024px) and (max-width: 1328px) {
+            .container {
+                display: grid;
+                grid-template-columns: 5% 33% 33% 20%;
+                grid-template-rows: 5% 32% 53%;
+                column-gap: 2.4rem;
+                row-gap: 2.4rem;
+                grid-template-areas:
+                "nav title title title" 
+                "nav card1 card2 card5large"
+                "nav card3 card4 card5large";
+                min-height: 100vh;
+            }
             .thisw{
                 text-indent:-666em;
                 overflow:hidden;
@@ -484,14 +626,15 @@
             }
          }
 
-        @media (min-width: 600px) and (max-width: 1024px) { 
+        @media (min-width: 600px) and (max-width: 1023px) { 
+
             .nav{
                 position: sticky;
             }
             .container {
             display: grid;
-            grid-template-columns: 5.6rem 40% 40%;
-            grid-template-rows: 8% 32% 51% 40%;
+            grid-template-columns: 8% 40% 40%;
+            grid-template-rows: 4% 20% 28% 45%;
             column-gap: 2.4rem;
             row-gap: 2.4rem;
             grid-template-areas:
@@ -535,16 +678,21 @@
                 margin: 0 auto;
                 overflow: scroll;
             }
+            .card5large{
+                margin-bottom: 24px;
+                
+            }
         }
 
-        @media (min-width: 320px) and (max-width: 599px) { 
+        @media (min-width: 100px) and (max-width: 599px) { 
             body {
                 margin-bottom: 3.5rem;
+                min-height: 256vh;
             }
             .container {
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 9% 4% 34% 34% 40% 70% 105%;
+            grid-template-rows: 3% 1% 12% 12% 19% 19% 32%;
             row-gap: 2.4rem;
             grid-template-areas:
             "nav"

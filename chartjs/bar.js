@@ -7,6 +7,7 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: '',
             data: [0, 3, 2, 3, 1, 5, 1],
+            color: '#A3A4A7',
             backgroundColor: [
 
             ],
