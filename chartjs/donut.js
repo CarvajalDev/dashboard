@@ -30,6 +30,12 @@ var myChart = new Chart(ctx, {
             title: {
                 display: true,
                 text: 'Weekly',
+                color: '#FAFAFA',
+                font: {
+                    family: 'Saira',
+                    size: 12,
+                    style: 'bold',
+                  },
             }
         }
     }
