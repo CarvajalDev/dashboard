@@ -305,12 +305,44 @@
             display: flex;
             flex-wrap: wrap;
             width: 50%;
-            height: 50vh;
+            height: 35vh;
             margin: 0 auto;
             overflow: hidden;
         }
 
         @media (min-width: 3800px)  { 
+            .chart-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 75%;
+                min-height: 20vh;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .donut-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            height: 40vh;
+            padding-top: 12%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        /*.chart-container {
+            font-size: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            width: 26vw;
+            min-height: 1vh;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            overflow: hidden;
+        }*/
             .container {
                 display: grid;
                 grid-template-columns: 4% 36% 36% 17%;
@@ -394,7 +426,7 @@
                 display: inline-block;
                 font-size: 0.8vw;
                 font-weight: 700;
-                margin: 1.8rem 6.0rem 2.4rem 2.0rem;
+                margin: 1.8rem 6.0rem 2.4rem 4.0rem;
             }
             .indicador-arriba{
                 color: var(--color-arrow-up);
@@ -425,7 +457,7 @@
                 border-collapse: collapse;
                 width: 90%;
                 margin-top: 4.0rem;
-                margin-left: 3.4rem;
+                margin-left: 14rem;
                 margin-right: 5.5rem;
                 font-size: 0.8vw;
             }
@@ -568,7 +600,7 @@
                 border-collapse: collapse;
                 width: 90%;
                 margin-top: 4.0rem;
-                margin-left: 3.4rem;
+                margin-left: 9rem;
                 margin-right: 5.5rem;
                 font-size: 0.8vw;
             }
@@ -596,14 +628,27 @@
                 text-align: center;
                 margin-top: 2.2vw;
             }
-        }
-
-        @media (min-width: 1920px) {
-            .container{
-                column-gap: 3.4rem;
-                row-gap: 3.4rem;
+            .chart-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 75%;
+                min-height: 20vh;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                overflow: hidden;
             }
         }
+
+        @media (min-width: 1330px) and (max-width: 1999px){
+            .container{
+                column-gap: 2.9rem;
+                row-gap: 2.9rem;
+                min-height: 100vh;
+            }
+        }
+        
 
         @media (min-width: 1024px) and (max-width: 1328px) {
             .container {
@@ -845,9 +890,9 @@
         <div class="card1">
             <p class="titular">Revenue</p>
             <p class="indicador-arriba"><span class="icon-up"></span>+0.3%</p>
-            <span class="i-icon"></span>
-            <p class="thisw"><span class="point-pink"></span>This week</p>
-            <p class="lastw"><span class="point-purple"></span>Last week</p>
+           <!-- <span class="i-icon"></span> -->
+            <!--<p class="thisw"><span class="point-pink"></span>This week</p>
+            <p class="lastw"><span class="point-purple"></span>Last week</p> -->
 
             <div class="chart-container">
                 <canvas id="linealChart"></canvas>

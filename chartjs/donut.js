@@ -33,7 +33,7 @@ var myChart = new Chart(ctx, {
                 color: '#FAFAFA',
                 font: {
                     family: 'Saira',
-                    size: 12,
+                    size: 14,
                     style: 'bold',
                   },
             }
