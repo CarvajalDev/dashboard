@@ -16,7 +16,7 @@ var myChart = new Chart(ctx, {
             borderWidth: 2,
             tension: 0.4
         },{
-            label: 'Last week',
+            label: 'Last Week',
             data: [4, 2, 4, 1, 3, 1, 2],
             backgroundColor: [
                 '#4145A8'
@@ -31,6 +31,16 @@ var myChart = new Chart(ctx, {
     },
 
     options: {
+        plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 12
+                    }
+                }
+            }
+        },
         /*plugins: {
             legend: {
                 labels: {

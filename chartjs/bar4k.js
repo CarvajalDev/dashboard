@@ -1,8 +1,9 @@
-var ctx = document.getElementById('barChart').getContext('2d');
+var ctx = document.getElementById('grandeChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+
         
         datasets: [{
             label: 'This Week',
@@ -17,7 +18,7 @@ var myChart = new Chart(ctx, {
             borderWidth: 2,
             tension: 0.4
         },{
-            label: 'Last Week',
+            label: 'Last week',
             data: [4, 2, 4, 1, 3, 1, 2],
             backgroundColor: [
                 'rgba(75, 81, 210, 1)',
@@ -40,10 +41,26 @@ var myChart = new Chart(ctx, {
                 labels: {
                     // This more specific font property overrides the global property
                     font: {
-                        size: 12
+                        size: 32
                     }
                 }
             }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    font: {
+                        size: 32
+                    }
+                }
+              },
+            y: {
+                ticks: {
+                    font: {
+                        size: 32
+                    }
+                }
+            },
         }
     
         /*scales: {

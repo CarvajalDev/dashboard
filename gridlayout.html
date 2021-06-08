@@ -907,6 +907,7 @@
 
             <div class="chart-container">
                 <canvas id="linealChart"></canvas>
+                <canvas id="grandelinealChart"></canvas>
             </div>
 
         </div>
@@ -916,6 +917,7 @@
             <span class="three-dots"></span>
             <div class="chart-container">
                 <canvas id="barChart"></canvas>
+                <canvas id="grandeChart"></canvas>
             </div>
         </div>
         <div class="card3">
@@ -923,6 +925,8 @@
             <span class="three-dots"></span>
             <div class="donut-container">
                 <canvas id="donutChart"></canvas>
+                <canvas id="grandedonutChart"></canvas>
+               <!-- <canvas id="medianadonutChart"></canvas> -->
             </div>
         </div>
         <div class="card4">
@@ -1004,6 +1008,42 @@
     <script src="./chartjs/lineal.js"></script>
     <script src="./chartjs/bar.js"></script>
     <script src="./chartjs/donut.js"></script>
+    <script src="./chartjs/bar4k.js"></script>
+    <script src="./chartjs/lineal4k.js"></script>
+    <script src="./chartjs/donut4k.js"></script>
+    <script src="./chartjs/donut2k.js"></script>
+
+
+    <script>
+        // Bar Chart
+        if (screen.width < 3840) {
+            document.getElementById('grandeChart').style.display = 'none';
+        }
+        if (screen.width === 3840) {
+            document.getElementById('barChart').style.display = 'none';
+        }
+
+        // Lineal Chart
+        if (screen.width < 3840) {
+            document.getElementById('grandelinealChart').style.display = 'none';
+        }
+        if (screen.width === 3840) {
+            document.getElementById('linealChart').style.display = 'none';
+        }
+
+        // Donut Chart
+        if (screen.width < 3840) {
+            document.getElementById('grandedonutChart').style.display = 'none';
+        }
+        if (screen.width === 3840) {
+            document.getElementById('donutChart').style.display = 'none';
+        }
+        if (screen.width === 2560){
+            document.getElementById('donutChart').style.display = 'none';
+            document.getElementById('grandedonutChart').style.display = 'none';
+            document.getElementById('medianadonutChart').style.display = 'inline';
+        }
+    </script>
 
 </body>
 </html>
