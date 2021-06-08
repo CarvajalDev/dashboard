@@ -1,4 +1,4 @@
-var ctx = document.getElementById('grandelinealChart').getContext('2d');
+var ctx = document.getElementById('medianalinealChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -36,7 +36,7 @@ var myChart = new Chart(ctx, {
                 labels: {
                     // This more specific font property overrides the global property
                     font: {
-                        size: 32
+                        size: 24
                     }
                 }
             }
@@ -49,14 +49,14 @@ var myChart = new Chart(ctx, {
             x: {
                 ticks: {
                     font: {
-                        size: 32
+                        size: 24
                     }
                 }
             },
             y: {
                 ticks: {
                     font: {
-                        size: 32
+                        size: 24
                     }
                 }
             },

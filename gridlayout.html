@@ -908,6 +908,7 @@
             <div class="chart-container">
                 <canvas id="linealChart"></canvas>
                 <canvas id="grandelinealChart"></canvas>
+                <canvas id="medianalinealChart"></canvas>
             </div>
 
         </div>
@@ -918,6 +919,7 @@
             <div class="chart-container">
                 <canvas id="barChart"></canvas>
                 <canvas id="grandeChart"></canvas>
+                <canvas id="medianaChart"></canvas>
             </div>
         </div>
         <div class="card3">
@@ -926,7 +928,7 @@
             <div class="donut-container">
                 <canvas id="donutChart"></canvas>
                 <canvas id="grandedonutChart"></canvas>
-               <!-- <canvas id="medianadonutChart"></canvas> -->
+                <canvas id="medianadonutChart"></canvas>
             </div>
         </div>
         <div class="card4">
@@ -1012,35 +1014,59 @@
     <script src="./chartjs/lineal4k.js"></script>
     <script src="./chartjs/donut4k.js"></script>
     <script src="./chartjs/donut2k.js"></script>
+    <script src="./chartjs/bar2k.js"></script>
+    <script src="./chartjs/lineal2k.js"></script>
+
 
 
     <script>
         // Bar Chart
         if (screen.width < 3840) {
             document.getElementById('grandeChart').style.display = 'none';
+            document.getElementById('medianaChart').style.display = 'none';
         }
         if (screen.width === 3840) {
             document.getElementById('barChart').style.display = 'none';
+            document.getElementById('medianaChart').style.display = 'none';
+        }
+
+        var bardosk = screen.width;
+        if (bardosk === 2560) {
+            document.getElementById('grandeChart').style.display = 'none';
+            document.getElementById('barChart').style.display = 'none';
+            document.getElementById('medianaChart').style.display = 'inline';
         }
 
         // Lineal Chart
         if (screen.width < 3840) {
             document.getElementById('grandelinealChart').style.display = 'none';
+            document.getElementById('medianalinealChart').style.display = 'none';
         }
         if (screen.width === 3840) {
             document.getElementById('linealChart').style.display = 'none';
+            document.getElementById('medianalinealChart').style.display = 'none';
+        }
+        
+        var linealdosk = screen.width;
+        if (linealdosk === 2560) {
+            document.getElementById('grandelinealChart').style.display = 'none';
+            document.getElementById('linealChart').style.display = 'none';
+            document.getElementById('medianalinealChart').style.display = 'inline';
         }
 
         // Donut Chart
         if (screen.width < 3840) {
             document.getElementById('grandedonutChart').style.display = 'none';
+            document.getElementById('medianadonutChart').style.display = 'none';
         }
         if (screen.width === 3840) {
             document.getElementById('donutChart').style.display = 'none';
         }
-        if (screen.width === 2560){
-            document.getElementById('donutChart').style.display = 'none';
+
+        var dosk = screen.width;
+        if (dosk === 2560) {
             document.getElementById('grandedonutChart').style.display = 'none';
+            document.getElementById('donutChart').style.display = 'none';
             document.getElementById('medianadonutChart').style.display = 'inline';
         }
     </script>

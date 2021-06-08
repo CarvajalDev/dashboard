@@ -18,7 +18,7 @@ var myChart = new Chart(ctx, {
             borderWidth: 2,
             tension: 0.4
         },{
-            label: 'Last week',
+            label: 'Last Week',
             data: [4, 2, 4, 1, 3, 1, 2],
             backgroundColor: [
                 'rgba(75, 81, 210, 1)',
