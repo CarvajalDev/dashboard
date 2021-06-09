@@ -1026,6 +1026,18 @@
                 padding-top: 1.8vw;
                 padding-left: 0.8vw;
             }
+
+            .chart-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 77%;
+                min-height: 20vh;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                overflow: hidden;
+            }
         }
 
     </style>
@@ -1059,6 +1071,7 @@
                 <canvas id="linealChart"></canvas>
                 <canvas id="grandelinealChart"></canvas>
                 <canvas id="medianalinealChart"></canvas>
+                <canvas id="extralargelinealChart"></canvas>
             </div>
 
         </div>
@@ -1070,6 +1083,7 @@
                 <canvas id="barChart"></canvas>
                 <canvas id="grandeChart"></canvas>
                 <canvas id="medianaChart"></canvas>
+                <canvas id="extralargeChart"></canvas>
             </div>
         </div>
         <div class="card3">
@@ -1079,6 +1093,7 @@
                 <canvas id="donutChart"></canvas>
                 <canvas id="grandedonutChart"></canvas>
                 <canvas id="medianadonutChart"></canvas>
+                <canvas id="extralargedonutChart"></canvas>
             </div>
         </div>
         <div class="card4">
@@ -1166,18 +1181,25 @@
     <script src="./chartjs/donut2k.js"></script>
     <script src="./chartjs/bar2k.js"></script>
     <script src="./chartjs/lineal2k.js"></script>
+    <script src="./chartjs/lineal8k.js"></script>
+    <script src="./chartjs/bar8k.js"></script>
+    <script src="./chartjs/donut8k.js"></script>
+
 
 
 
     <script>
         // Bar Chart
+
         if (screen.width < 3840) {
             document.getElementById('grandeChart').style.display = 'none';
             document.getElementById('medianaChart').style.display = 'none';
+            document.getElementById('extralargeChart').style.display = 'none';
         }
         if (screen.width === 3840) {
             document.getElementById('barChart').style.display = 'none';
             document.getElementById('medianaChart').style.display = 'none';
+            document.getElementById('extralargeChart').style.display = 'none';
         }
 
         var bardosk = screen.width;
@@ -1187,14 +1209,25 @@
             document.getElementById('medianaChart').style.display = 'inline';
         }
 
+        var barochok = screen.width;
+        if (barochok === 7680) {
+            document.getElementById('grandeChart').style.display = 'none';
+            document.getElementById('barChart').style.display = 'none';
+            document.getElementById('medianaChart').style.display = 'none';
+            document.getElementById('extralargeChart').style.display = 'inline';
+        }
+
         // Lineal Chart
+
         if (screen.width < 3840) {
             document.getElementById('grandelinealChart').style.display = 'none';
             document.getElementById('medianalinealChart').style.display = 'none';
+            document.getElementById('extralargelinealChart').style.display = 'none';
         }
         if (screen.width === 3840) {
             document.getElementById('linealChart').style.display = 'none';
             document.getElementById('medianalinealChart').style.display = 'none';
+            document.getElementById('extralargelinealChart').style.display = 'none';
         }
         
         var linealdosk = screen.width;
@@ -1202,23 +1235,44 @@
             document.getElementById('grandelinealChart').style.display = 'none';
             document.getElementById('linealChart').style.display = 'none';
             document.getElementById('medianalinealChart').style.display = 'inline';
+            document.getElementById('extralargelinealChart').style.display = 'none';
+        }
+
+        var linealochok = screen.width;
+        if (linealochok === 7680) {
+            document.getElementById('grandelinealChart').style.display = 'none';
+            document.getElementById('linealChart').style.display = 'none';
+            document.getElementById('medianalinealChart').style.display = 'none';
+
         }
 
         // Donut Chart
         if (screen.width < 3840) {
             document.getElementById('grandedonutChart').style.display = 'none';
             document.getElementById('medianadonutChart').style.display = 'none';
+            document.getElementById('extralargedonutChart').style.display = 'none';
         }
         if (screen.width === 3840) {
             document.getElementById('donutChart').style.display = 'none';
+            document.getElementById('extralargedonutChart').style.display = 'none';
         }
 
         var dosk = screen.width;
         if (dosk === 2560) {
             document.getElementById('grandedonutChart').style.display = 'none';
             document.getElementById('donutChart').style.display = 'none';
+            document.getElementById('extralargedonutChart').style.display = 'none';
             document.getElementById('medianadonutChart').style.display = 'inline';
         }
+
+        var ochok = screen.width;
+        if (ochok === 7680) {
+            document.getElementById('grandedonutChart').style.display = 'none';
+            document.getElementById('donutChart').style.display = 'none';
+            document.getElementById('medianadonutChart').style.display = 'none';
+            document.getElementById('extralargedonutChart').style.display = 'inline';
+        }
+        
     </script>
 
 </body>

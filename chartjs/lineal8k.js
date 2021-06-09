@@ -1,4 +1,4 @@
-var ctx = document.getElementById('medianalinealChart').getContext('2d');
+var ctx = document.getElementById('extralargelinealChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -13,7 +13,7 @@ var myChart = new Chart(ctx, {
             borderColor: [
                 'rgba(168, 9, 164, 1)',
             ],
-            borderWidth: 5,
+            borderWidth: 8,
             tension: 0.4
         },{
             label: 'Last Week',
@@ -24,7 +24,7 @@ var myChart = new Chart(ctx, {
             borderColor: [
                 '#4145A8',
             ],
-            borderWidth: 5,
+            borderWidth: 8,
             tension: 0.4
         }],
 
@@ -36,7 +36,7 @@ var myChart = new Chart(ctx, {
                 labels: {
                     // This more specific font property overrides the global property
                     font: {
-                        size: 24
+                        size: 64
                     }
                 }
             }
@@ -49,14 +49,14 @@ var myChart = new Chart(ctx, {
             x: {
                 ticks: {
                     font: {
-                        size: 24
+                        size: 64
                     }
                 }
             },
             y: {
                 ticks: {
                     font: {
-                        size: 24
+                        size: 64
                     }
                 }
             },
